@@ -1,0 +1,27 @@
+node_modules/
+__pycache__/
+.vscode/
+.env
+dist/
+build/
+*.log
+todo.json
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# Variable files
+*.tfvars
+*.tfvars.json
+
+# Crash logs
+crash.log
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json

@@ -1,0 +1,18 @@
+---
+- hosts: web
+
+  tasks:
+
+    - name: Check Python version
+      command: python3 --version
+      register: python_version
+
+    - debug:
+        var: python_version.stdout
+
+    - name: Check Node version
+      command: node --version
+      register: node_version
+
+    - debug:
+        var: node_version.stdout
