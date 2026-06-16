@@ -1,17 +1,17 @@
 services:
-  frontend:
+  frontend-v3:
     build: 
       context: ./frontend
       dockerfile: Dockerfile.front
     ports:
       - "3000:3000"
     depends_on:
-      - backend
+      - backend-v3
     restart: on-failure
     networks:
       - todo_net
 
-  backend:
+  backend-v3:
     build: 
       context: ./backend
       dockerfile: Dockerfile.back

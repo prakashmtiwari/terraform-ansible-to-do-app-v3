@@ -8,4 +8,15 @@ provider "aws" {
       ManagedBy   = "Terraform"
     }
   }
+
+}
+
+terraform {
+  backend "s3" {
+    bucket         = "to-do-app-terraform-state"
+    key            = "to-do-app/terraform.tfstate"
+    region         = "ap-south-1"
+    use_lockfile     = true
+    encrypt        = true
+  }
 }
